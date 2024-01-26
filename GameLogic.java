@@ -474,7 +474,10 @@ public class GameLogic implements PlayableLogic
 
                     if (positionTable[i][j].size()>1)
                     {
-                        positionList.add(STR."\{i}:\{j}:\{positionTable[i][j].size()}");
+                        StringBuilder stringBuilder = new StringBuilder();
+                        stringBuilder.append(i).append(":").append(j).append(":").append(positionTable[i][j].size());
+                        String result = stringBuilder.toString();
+                        positionList.add(result);
                     }
 
                 }
@@ -484,7 +487,12 @@ public class GameLogic implements PlayableLogic
             for (String str : positionList)
             {
                 String[] arrOfStr = str.split(":", 3);
-                System.out.println(STR."(\{arrOfStr[1]}, \{arrOfStr[0]})\{arrOfStr[2]} pieces");
+
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.append("(").append(arrOfStr[1]).append(", ").append(arrOfStr[0]).append(")").append(arrOfStr[2]).append(" pieces");
+                String result = stringBuilder.toString();
+
+                System.out.println(result);
             }
             System.out.println("***************************************************************************");
 

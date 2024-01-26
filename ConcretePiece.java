@@ -53,12 +53,17 @@ public class ConcretePiece implements Piece{
 
     public String toStringKills()
     {
-        return STR."\{pieceName}: \{kills} kills";
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(pieceName).append(": ").append(kills).append(" kills");
+        return stringBuilder.toString();
     }
 
     public String toStringSquares()
     {
-        return STR."\{pieceName}: \{squares} squares";
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(pieceName).append(": ").append(squares).append(" squares");
+        return stringBuilder.toString();
+
     }
 
 
